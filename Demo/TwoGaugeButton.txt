@@ -1,4 +1,9 @@
-REM paste 5 and 20 in delay
+REM TwoGaugeButton.txt
+REM
+REM Copyright (C) 2024 KW Services.
+REM MIT License
+REM MMBASIC 5.07
+REM
 RTC GETTIME
 PRINT TIME$
 GUI DELETE ALL

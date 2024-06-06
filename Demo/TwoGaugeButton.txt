@@ -1,0 +1,56 @@
+REM paste 5 and 20 in delay
+RTC GETTIME
+PRINT TIME$
+GUI DELETE ALL
+FONT 5
+CONST BLK=RGB(BLACK)
+CONST WHT=RGB(127,100,100)
+CONST YLW=RGB(YELLOW)
+CONST GRN=RGB(GREEN)
+CONST RED=RGB(RED)
+CONST BLU=RGB(BLUE)
+CONST CYA=RGB(CYAN)
+COLOUR BLK,WHT
+cls RGB(WHITE) 
+GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
+GUI CAPTION #11, "Temperature", 280, 50, LT, BLK, WHT
+GUI CAPTION #2, "Reading", 576, 50, LT, BLK, WHT
+GUI GAUGE #10,400,200,100,BLK,BLK,0,100,1,"Deg F",GRN
+GUI GAUGE #3,640,200,100,BLK,BLK,0,100,1,"Cnt",GRN,40,YLW,65,RED
+GUI CAPTION #4, "States:", 50, 100, LT, BLK, WHT
+GUI LED #5, "Running", 70, 180, 20, GRN
+GUI LED #6, "Stopped", 70, 230, 20, RED
+GUI CAPTION #7, TIME$, 50, 450, LT, BLK, WHT
+GUI BUTTON #8, "START|STOP", 50, 300, 200, 75, BLK, CYA
+CtrlVal(#10) = 77.2
+SETPIN GP17, DIN
+SETPIN 31, AIN
+CtrlVal(#5) = 0
+CtrlVal(#6) = 1
+DO
+state = PIN(GP17)
+IF state = 0 THEN 
+  cls blk
+  EXIT
+ENDIF
+btn = CtrlVal(#8)
+IF btn = 0 THEN 
+  CPU SLEEP 0.5
+  CtrlVal(#5) = 0
+  CtrlVal(#6) = 1
+ELSE
+  CtrlVal(#5) = 1
+  CtrlVal(#6) = 0
+ENDIF
+IF CtrlVal(#3) < 10 THEN CtrlVal(3) = 0
+IF CtrlVal(#5) = 1 THEN 
+  CtrlVal(#10) = 77.5
+  CtrlVal(#3) = PIN(31) * 30
+ELSE
+  CtrlVal(#10) = 77.2
+  CtrlVal(#3) = 0
+ENDIF
+CtrlVal(#7) = TIME$
+CPU SLEEP 0.5 
+LOOP 
+

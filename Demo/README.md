@@ -5,9 +5,11 @@
 Firmware:  PicoMite 5.07
 Devices: SSD1963 LCD Display (800*480 pixels)
 
+```
 TeraTerm Serial: 
 BaudRate: 115200 8 bit no parity 1 stop bit
 Transmit delay: 5 msec/char 20 msec/line
+```
 
 There are several ways to deploy a file to the Pico:
 - Drag the file to a SD Card and insert the SD card into the display's SD Port.

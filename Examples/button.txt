@@ -1,0 +1,25 @@
+REM button.txt
+REM
+REM Copyright (C) 2024 KW Services.
+REM MIT License
+REM MMBASIC 5.07
+REM
+REM Example code to press a button to blink a LED
+REM Note: On the Pico Display base board a button is hard-wired to VCC
+REM       therefore reading it returns a one. Pressing the button connects 
+REM       the button to Ground  and so the button reads as zero.
+REM
+SETPIN GP21, DOUT
+SETPIN GP17, DIN
+REM
+print "Running button.txt   Press Control-c to exit."
+DO
+ IF PIN(GP17) = 0 THEN
+   PIN(GP21) = 1
+   print "Pressed button"
+   PAUSE 300
+ ELSE
+   PIN(GP21) = 0
+   PAUSE 300
+  ENDIF
+LOOP

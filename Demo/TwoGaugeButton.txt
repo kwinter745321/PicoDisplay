@@ -6,9 +6,9 @@ REM MMBASIC 5.07
 REM
 REM Example code to display a GUI control on a LCD display
 REM
-REM Fetch the Current time/date from the external device DS3231
-REM
-RTC GETTIME
+REM To fetch the time/date from the external device DS3231
+REM Remove the REM
+REM RTC GETTIME
 PRINT TIME$
 GUI DELETE ALL
 FONT 5

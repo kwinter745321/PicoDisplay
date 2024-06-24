@@ -1,5 +1,17 @@
 # README.md - Demo
 
+# Test Your LCD Display
+
+To verify your LCD Display is correctly configured
+(after you perform the below LCD Display Setup below),
+enter this command:
+
+```
+gui test lcdpanel
+```
+
+To exit the test, press Control-c on the desktop keyboard.
+
 # TwoGaugeButton.txt
 
 ```
@@ -31,7 +43,7 @@ On the display, press the "START" button. This action changes the state to "Runn
 To show the Gauge controls, I set the first gauge value to 77.2.  The second gauge reads the values of the potentiometer only if the state is "Running".  Twist the knob on the potentiometer and the second gauge updates.  The second gauge color changes color to yellow when the value is above 40. It changes to red when the value is above 65.
 
 
-# Setup
+# LCD Display Setup
 
 There is a one-time setup.  The values will be saved (but each entry causes the Pico to reset -- this is expected.  Just reconnect.)
 

@@ -76,3 +76,18 @@ RTC SETTIME 2024,6,20,13,34,6
 ```
 
 This action sets current date/time to 20 June 2024 13:35:06.
+
+# Console Mode
+
+An interesting feature is using the LCD Display in "console mode".
+
+```
+OPTION LCDPANEL CONSOLE
+```
+
+Essentially everything displayed in the terminal is output to the LCD Display.
+To turn this feature off:
+
+```
+OPTION LCDPANEL NOCONSOLE
+```

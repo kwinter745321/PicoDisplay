@@ -1,0 +1,13 @@
+REM blink.txt
+REM
+REM MMBASIC 5.07
+REM
+REM Example code to blink a LED from page 8 of manual.
+REM
+SETPIN GP21, DOUT
+DO
+ PIN(GP21) = 1
+ PAUSE 300
+ PIN(GP21) = 0
+ PAUSE 300
+LOOP

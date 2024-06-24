@@ -25,6 +25,6 @@ type RUN
 
 This invokes the program. 
 
-By the way, your code is saved with the Pico, so the next time you connect it to the desktop
+By the way, your code is saved within the Pico, so the next time you connect it to the desktop
 the code is stil there.
 

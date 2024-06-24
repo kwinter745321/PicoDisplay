@@ -12,6 +12,12 @@ gui test lcdpanel
 
 To exit the test, press Control-c on the desktop keyboard.
 
+To clear the screen:
+
+```
+cls 0
+```
+
 # TwoGaugeButton.txt
 
 ```

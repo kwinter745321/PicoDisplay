@@ -1,0 +1,21 @@
+REM button.txt
+REM
+REM Copyright (C) 2024 KW Services.
+REM MIT License
+REM MMBASIC 5.07
+REM
+rem A potentiometer outputs 0 to 3.3v 
+rem GP26 is defined as Analog Input
+rem
+SETPIN GP26, AIN
+rem A button is connected to GP17
+SETPIN GP17, DIN
+REM
+print "Running read_voltage.txt   Press Control-c to exit."
+DO
+ IF PIN(GP17) = 0 THEN
+   reading = PIN(GP26)
+   print "GP 26 value = ", reading
+   PAUSE 500
+ ENDIF
+LOOP

@@ -51,7 +51,6 @@ The product is only the PCB. The Pico, display board, wires and the external dev
         &#x2022; LCD Display (800*480)</br>
         &#x2022; Touchscreen</br>
         &#x2022; SD Card</br>
-        &#x2022; Optional Flash chip</br>
         </td>
      </tr>
     </table>

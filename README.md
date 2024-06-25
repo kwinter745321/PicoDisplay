@@ -34,8 +34,8 @@ The product is only the PCB. The Pico, display board, wires and the external dev
      <tr>
         <td>
         &#x2022; Holds a Pico USB Stick</br>
-        &#x2022; Male Headers (easier connections)</br>
-        &#x2022; USB-C Port for external 5v Battery</br>
+        &#x2022; Male Headers</br>
+        &#x2022; USB-C Port for Power</br>
         </td>
         <td>
         &#x2022; Pushbuttons (x2)</br>
@@ -48,7 +48,7 @@ The product is only the PCB. The Pico, display board, wires and the external dev
         &#x2022; OLED port</br>
         </td>
         <td>
-        &#x2022; SSD1963 LCD (800*480)</br>
+        &#x2022; LCD Display (800*480)</br>
         &#x2022; Touchscreen</br>
         &#x2022; SD Card</br>
         &#x2022; Optional Flash chip</br>

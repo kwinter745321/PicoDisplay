@@ -53,7 +53,8 @@ Since the Frame is on the right side of the display the coordinates subtract its
 Using the onboard EDIT function, load the program text. Press the <F1> function key to save.
 Then type 'run'.
 
-<img src="./Images/Pico_Touch_demo.jpg" align="center" height="800" width="480" >
+
+![](/Images/Pico_Touch_demo.jpg)
 
 # How to Load an Example
 

@@ -1,0 +1,66 @@
+REM button.txt
+REM
+REM Copyright (C) 2024 KW Services.
+REM MIT License
+REM MMBASIC 5.07
+REM
+REM Example code to get XU position on a LCD Display
+REM Note: On the Pico Display base board there is nothing wired.
+REM       All features are virtual controls on the LCD Display
+REM
+GUI DELETE ALL
+cls RGB(black) 
+COLOUR RGB(white), RGB(black) 
+FONT 3,1
+GUI FRAME #1,"Touch Here",350,20,420,440,RGB(yellow)
+GUI CAPTION #2,"HPOS",50,50,"LT",RGB(white),RGB(black)
+GUI CAPTION #3,"VPOS",50,110,"LT",RGB(white),RGB(black)
+GUI DISPLAYBOX #4,125,50,200,40,RGB(cyan),RGB(black)
+GUI DISPLAYBOX #5,125,100,200,40,RGB(cyan),RGB(black)
+GUI BUTTON #6,"Fetching|Start",75,180,250,60,RGB(black),RGB(cyan)
+GUI AREA #7,360,40,400,400
+GUI DISPLAYBOX #8,125,250,200,40,RGB(cyan),RGB(black)
+GUI BUTTON #9,"Stopped|Stop",75,340,250,60,RGB(black),RGB(cyan)
+REM Code
+CtrlVal(#6) = 1
+CtrlVal(#9) = 1
+state = 0
+once = 0
+sx = 0
+sy = 0
+DO
+IF state = 1 THEN
+CtrlVal(#8) = STR$(State)
+sx = TOUCH(X)
+sy = TOUCH(Y)
+IF sx = -1 THEN
+sx = TOUCH(LASTX)
+sy = TOUCH(LASTY)
+ENDIF
+sx = sx - 360
+sy = sy - 40
+IF sx > 0 AND sy> 0 THEN
+CtrlVal(#4) = STR$(sx)
+CtrlVal(#5) = STR$(sy)
+CtrlVal(#8) = STR$(sx) + "," + STR$(sy)
+ENDIF
+ENDIF
+IF  CtrlVal(#6) = 0 THEN
+CPU SLEEP 0.5
+IF once = 0 THEN
+PRINT "Fetching started"
+once = 1
+state = 1
+ENDIF
+ENDIF
+IF  CtrlVal(#9) = 0 THEN
+CtrlVal(#9) = 1
+PRINT "Fetching stopped"
+CtrlVal(#6) = 1
+state = 0
+once = 0
+CPU SLEEP 1
+ENDIF
+CPU SLEEP 0.2
+LOOP
+

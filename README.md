@@ -59,7 +59,7 @@ The product is only the PCB. The Pico, display board, wires and the external dev
 Pico Display Base Board
 
 <img src="./Images/PicoDisplayBaseBoard.jpg" align="center" height="50%" width="50%" >
-![](/Images/PicoDisplayBaseBoard.jpg)
+
 
 ## Example with a LCD display
 

@@ -1,4 +1,4 @@
-REM button.txt
+REM pico_touch_demo.txt
 REM
 REM Copyright (C) 2024 KW Services.
 REM MIT License

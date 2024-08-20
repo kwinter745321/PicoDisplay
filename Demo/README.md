@@ -1,5 +1,34 @@
 # README.md - Demo
 
+# Examples
+
+- pico_colors.txt
+- TwoGaugeButton.txt
+
+
+# pico_colors.txt
+
+The program is a static display showing a caption an LED and a button in each of the "named" basic color names.
+If you want to see what the colors look like then this is the app.
+
+Other colors are easily achieved using the color wheel.  
+
+# TwoGaugeButton.txt Application explanation
+
+The program demonstrates the GUI Controls and onboard device integration.  See Setup below.
+
+The onboard device setup:
+```
+GP17 is connected to a onboard button.
+GP26 is connected to the potentiometer.
+Note: Analog is weird as GP26 is SETPIN 31.
+```
+
+On the display, press the "START" button. This action changes the state to "Running".
+
+To show the Gauge controls, I set the first gauge value to 77.2.  The second gauge reads the values of the potentiometer only if the state is "Running".  Twist the knob on the potentiometer and the second gauge updates.  The second gauge color changes color to yellow when the value is above 40. It changes to red when the value is above 65.
+
+
 # Test Your LCD Display
 
 To verify your LCD Display is correctly configured
@@ -17,37 +46,6 @@ To clear the screen:
 ```
 cls 0
 ```
-
-# TwoGaugeButton.txt
-
-```
-Firmware:  PicoMite 5.07
-Devices: SSD1963 LCD Display (800*480 pixels)
-
-TeraTerm Serial: 
-BaudRate: 115200 8 bit no parity 1 stop bit
-Transmit delay: 5 msec/char 20 msec/line
-```
-
-There are several ways to deploy a file to the Pico:
-- Drag the file to a SD Card and insert the SD card into the display's SD Port.
-- Inside a TeraTerm terminal session, enter EDIT mode and paste the code.
-
-# Application explanation
-
-The program demonstrates the GUI Controls and onboard device integration.  See Setup below.
-
-The onboard device setup:
-```
-GP17 is connected to a onboard button.
-GP26 is connected to the potentiometer.
-Note: Analog is weird as GP26 is SETPIN 31.
-```
-
-On the display, press the "START" button. This action changes the state to "Running".
-
-To show the Gauge controls, I set the first gauge value to 77.2.  The second gauge reads the values of the potentiometer only if the state is "Running".  Twist the knob on the potentiometer and the second gauge updates.  The second gauge color changes color to yellow when the value is above 40. It changes to red when the value is above 65.
-
 
 # LCD Display Setup
 
@@ -91,3 +89,16 @@ To turn this feature off:
 ```
 OPTION LCDPANEL NOCONSOLE
 ```
+# Deploy
+```
+Firmware:  PicoMite 5.07
+Devices: SSD1963 LCD Display (800*480 pixels)
+
+TeraTerm Serial: 
+BaudRate: 115200 8 bit no parity 1 stop bit
+Transmit delay: 5 msec/char 20 msec/line
+```
+
+There are several ways to deploy a file to the Pico:
+- Drag the file to a SD Card and insert the SD card into the display's SD Port.
+- Inside a TeraTerm terminal session, enter EDIT mode and paste the code.

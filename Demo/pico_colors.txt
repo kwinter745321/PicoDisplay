@@ -3,30 +3,30 @@
 'Copyright (c) 2024 KW Services.
 'MIT License
 'PicoMite MMBasic 5.07
-'Control layout configured: 2024-08-19 19:42:05.
+'Control layout configured: 2024-08-23 10:42:05.
 '
 GUI DELETE ALL
-cls RGB(black) 
-COLOUR RGB(white), RGB(black) 
-FONT 3,1
-GUI CAPTION #1,"white",50,10,"LT",RGB(white),RGB(black)
-GUI CAPTION #2,"black",50,40,"LT",RGB(black),RGB(black)
-GUI CAPTION #3,"blue",50,70,"LT",RGB(blue),RGB(black)
-GUI CAPTION #4,"green",50,100,"LT",RGB(green),RGB(black)
-GUI CAPTION #5,"cyan",50,130,"LT",RGB(cyan),RGB(black)
-GUI CAPTION #6,"red",50,160,"LT",RGB(red),RGB(black)
-GUI CAPTION #7,"magenta",50,190,"LT",RGB(magenta),RGB(black)
-GUI CAPTION #8,"yellow",50,220,"LT",RGB(yellow),RGB(black)
-GUI CAPTION #9,"brown",50,250,"LT",RGB(brown),RGB(black)
-GUI CAPTION #10,"orange",50,280,"LT",RGB(orange),RGB(black)
-GUI CAPTION #11,"pink",50,310,"LT",RGB(pink),RGB(black)
-GUI CAPTION #12,"gold",50,340,"LT",RGB(gold),RGB(black)
-GUI CAPTION #13,"salmon",50,370,"LT",RGB(salmon),RGB(black)
-GUI CAPTION #14,"beige",50,400,"LT",RGB(beige),RGB(black)
-GUI CAPTION #15,"lightgray",50,430,"LT",RGB(lightgray),RGB(black)
-GUI CAPTION #16,"gray",50,460,"LT",RGB(gray),RGB(black)
+CLS RGB(black)
+Colour RGB(white), RGB(black)
+Font 3,1
+GUI CAPTION #1,"white",20,1,"LT",RGB(white),RGB(black)
+GUI CAPTION #2,"black",20,30,"LT",RGB(black),RGB(black)
+GUI CAPTION #3,"blue",20,60,"LT",RGB(blue),RGB(black)
+GUI CAPTION #4,"green",20,90,"LT",RGB(green),RGB(black)
+GUI CAPTION #5,"cyan",20,120,"LT",RGB(cyan),RGB(black)
+GUI CAPTION #6,"red",20,150,"LT",RGB(red),RGB(black)
+GUI CAPTION #7,"magenta",20,180,"LT",RGB(magenta),RGB(black)
+GUI CAPTION #8,"yellow",20,210,"LT",RGB(yellow),RGB(black)
+GUI CAPTION #9,"brown",20,240,"LT",RGB(brown),RGB(black)
+GUI CAPTION #10,"orange",20,270,"LT",RGB(orange),RGB(black)
+GUI CAPTION #11,"pink",20,300,"LT",RGB(pink),RGB(black)
+GUI CAPTION #12,"gold",20,330,"LT",RGB(gold),RGB(black)
+GUI CAPTION #13,"salmon",20,360,"LT",RGB(salmon),RGB(black)
+GUI CAPTION #14,"beige",20,390,"LT",RGB(beige),RGB(black)
+GUI CAPTION #15,"lightgray",20,420,"LT",RGB(lightgray),RGB(black)
+GUI CAPTION #16,"gray",20,450,"LT",RGB(gray),RGB(black)
 GUI LED #17,"white",200,20,10,RGB(white)
-GUI LED #18,"black",200,50,10,RGB(black)
+GUI LED #18,"black",200,20,10,RGB(black)
 GUI LED #19,"blue",200,80,10,RGB(blue)
 GUI LED #20,"green",200,110,10,RGB(green)
 GUI LED #21,"cyan",200,140,10,RGB(cyan)
@@ -41,22 +41,22 @@ GUI LED #29,"salmon",200,380,10,RGB(salmon)
 GUI LED #30,"beige",200,410,10,RGB(beige)
 GUI LED #31,"lightgray",200,440,10,RGB(lightgrey)
 GUI LED #32,"gray",200,470,10,RGB(gray)
-GUI BUTTON #33,"white",380,20,250,30,RGB(black),RGB(white)
-GUI BUTTON #34,"black",380,50,250,30,RGB(white),RGB(black)
-GUI BUTTON #35,"blue",380,80,250,32,RGB(black),RGB(blue)
-GUI BUTTON #36,"green",380,110,250,30,RGB(black),RGB(green)
-GUI BUTTON #37,"cyan",380,140,250,30,RGB(black),RGB(cyan)
-GUI BUTTON #38,"red",380,170,250,30,RGB(black),RGB(red)
-GUI BUTTON #39,"magenta",380,200,250,30,RGB(black),RGB(magenta)
-GUI BUTTON #40,"yellow",380,230,250,30,RGB(black),RGB(yellow)
-GUI BUTTON #41,"brown",380,260,250,30,RGB(black),RGB(brown)
-GUI BUTTON #42,"orange",380,290,250,30,RGB(black),RGB(orange)
-GUI BUTTON #43,"pink",380,320,250,30,RGB(black),RGB(pink)
-GUI BUTTON #44,"gold",380,350,250,30,RGB(black),RGB(gold)
-GUI BUTTON #45,"salmon",380,380,250,30,RGB(black),RGB(salmon)
-GUI BUTTON #46,"beige",380,410,250,30,RGB(black),RGB(beige)
-GUI BUTTON #47,"lightgray",380,440,250,30,RGB(black),RGB(lightgray)
-GUI BUTTON #48,"gray",380,470,250,32,RGB(black),RGB(gray)
+GUI BUTTON #33,"white",380,1,250,30,RGB(black),RGB(white)
+GUI BUTTON #34,"black",380,30,250,30,RGB(white),RGB(black)
+GUI BUTTON #35,"blue",380,60,250,32,RGB(black),RGB(blue)
+GUI BUTTON #36,"green",380,90,250,30,RGB(black),RGB(green)
+GUI BUTTON #37,"cyan",380,120,250,30,RGB(black),RGB(cyan)
+GUI BUTTON #38,"red",380,150,250,30,RGB(black),RGB(red)
+GUI BUTTON #39,"magenta",380,180,250,30,RGB(black),RGB(magenta)
+GUI BUTTON #40,"yellow",380,210,250,30,RGB(black),RGB(yellow)
+GUI BUTTON #41,"brown",380,240,250,30,RGB(black),RGB(brown)
+GUI BUTTON #42,"orange",380,270,250,30,RGB(black),RGB(orange)
+GUI BUTTON #43,"pink",380,300,250,30,RGB(black),RGB(pink)
+GUI BUTTON #44,"gold",380,330,250,30,RGB(black),RGB(gold)
+GUI BUTTON #45,"salmon",380,360,250,30,RGB(black),RGB(salmon)
+GUI BUTTON #46,"beige",380,390,250,30,RGB(black),RGB(beige)
+GUI BUTTON #47,"lightgray",380,420,250,30,RGB(black),RGB(lightgray)
+GUI BUTTON #48,"gray",380,450,250,32,RGB(black),RGB(gray)
 num = 0
 CtrlVal(#17) = 1
 CtrlVal(#18) = 1
@@ -75,9 +75,8 @@ CtrlVal(#30) = 1
 CtrlVal(#31) = 1
 CtrlVal(#32) = 1
 ' Main Loop
-DO
+Do
 num = num + 1
-IF num > 100 THEN num = 0
+If num > 100 Then num = 0
 CPU SLEEP 0.1
-LOOP
-
+Loop
